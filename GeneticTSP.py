@@ -100,6 +100,11 @@ def generation(population):
     nr_of_children = len(population) - survivors
 
     nr_of_cloned_children = int(nr_of_children*reproductionTypeRatio)
+    
+    # If the elite variable is set to false, we want to keep some solutions that don't look promising 
+    # yet alive anyway, to keep the genetic varation in the population high. We do this by replacing some of the 
+    # solutions that endid up in the surviving part of the array (beginning of the array), with some of the solutions 
+    # that ended up in the 'dying' part of the array (the rest of the array, border is determines by survivalRatio).
     if elite is False:
         elites = int(len(population) * (survivalRatio*survivalRatio))
         rest = population[elites+1:]
