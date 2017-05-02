@@ -14,8 +14,8 @@ distanceMatrix = [[0, 12, 24, 2.5, 2, 3, 3, 7],
           [2.5, 2, 3, 0, 2, 2, 7, 10],
           [2, 2.5, 2, 13, 0, 12, 8, 1],
           [1, 2, 2.5, 2, 7, 0, 3, 51],
-          [3, 4, 5, 6, 7, 8, 10, 4],
-          [1, 2, 3, 4, 5, 6, 7, 8,]]
+          [3, 4, 5, 6, 7, 8, 0, 4],
+          [1, 2, 3, 4, 5, 6, 7, 0,]]
 
 # Alternatively you can provide a file in .tsp-format. Set 'fromFile' to 'True' and provide the path to the file.
 fromFile = False
