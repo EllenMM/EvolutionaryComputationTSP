@@ -17,7 +17,7 @@ distanceMatrix = [[0, 12, 24, 2.5, 2, 3, 3, 7],
           [1, 2, 3, 4, 5, 6, 7, 8,]]
 
 # Alternatively you can provide a file in .tsp-format. Set 'fromFile' to 'True' and provide the path to the file.
-fromFile = True
+fromFile = False
 fileName = "/Users/ellenmaassen/Documents/VU/ComputationalThinking/TSP/lu980.tsp.txt"
 
 # Choose the size of the population and how many generations you want to run
@@ -32,7 +32,7 @@ survivalRatio = 0.4
 # Two types of reproduction are implemented: asexual (cloning) and sexual (cross-over),
 # if reproductionTypeRatio is 1, only cloning is used,
 # if it is 0, only sexual reproduction is used. Otherwise a proportion of both.
-reproductionTypeRatio = 1
+reproductionTypeRatio = 0.5
 
 # If elite is true then only the best solutions survive, instead of also some random ones.
 elite = False
@@ -244,10 +244,3 @@ def run():
 best = run()
 print("Best solution found has length: " + str((best.cost)) + ", solution: " + str(best.gene))
 
-#print("Best solution in last population:" + str(run()))
-
-#for i in range(10):
-#    for j in range(8):
-#        reproductionTypeRatio = i/10
-#        survivalRatio = (j+1)/10
-#        print(str(i) +" "+ str(j) + " "+ str(run()))
