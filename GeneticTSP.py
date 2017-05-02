@@ -62,7 +62,6 @@ if fromFile:
     cityList = []
     line = file.readline()
     while line != "":
-        print(line)
         city = re.match(r'^\d*\s(\d+\.\d+)\s(\d+\.\d+)$', line)
         if city is not None:
             cityList.append((float(city.group(1)), float(city.group(2))))
