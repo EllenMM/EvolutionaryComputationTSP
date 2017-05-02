@@ -1,6 +1,7 @@
 import random
 import re
 import math
+import os
 
 # #####
 # Below you can set all the values the way you want to optimise the algorithm, and insert problem instances
@@ -18,7 +19,7 @@ distanceMatrix = [[0, 12, 24, 2.5, 2, 3, 3, 7],
 
 # Alternatively you can provide a file in .tsp-format. Set 'fromFile' to 'True' and provide the path to the file.
 fromFile = False
-fileName = "lu980.tsp.txt"
+fileName = os.path.dirname(os.path.abspath(__file__)) + "lu980.tsp.txt"
 
 # Choose the size of the population and how many generations you want to run
 populationSize = 100
