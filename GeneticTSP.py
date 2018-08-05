@@ -30,9 +30,9 @@ nrOfGenerations = 10000
 # we have a higher genetic diversity, but also less exploration per generation, so a slower development.
 survivalRatio = 0.4
 
-# Two types of reproduction are implemented: asexual (cloning) and sexual (cross-over),
-# if reproductionTypeRatio is 1, only cloning is used,
-# if it is 0, only sexual reproduction is used. Otherwise a proportion of both.
+# Two types of reproduction are implemented: mutation and cross-over,
+# if reproductionTypeRatio is 1, only matuation is used,
+# if it is 0, only cross-over is used. Otherwise a proportion of both.
 reproductionTypeRatio = 0.5
 
 # If elite is true then only the best solutions survive, instead of also some random ones.
