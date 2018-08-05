@@ -19,7 +19,7 @@ distanceMatrix = [[0, 12, 24, 2.5, 2, 3, 3, 7],
 
 # Alternatively you can provide a file in .tsp-format. Set 'fromFile' to 'True' and provide the path to the file.
 fromFile = False
-fileName = os.path.dirname(os.path.abspath(__file__)) + "lu980.tsp.txt"
+fileName = os.path.dirname(os.path.abspath(__file__)) + "\dj38.tsp.txt"
 
 # Choose the size of the population and how many generations you want to run
 populationSize = 100
@@ -95,7 +95,7 @@ def generation(population):
     population.sort(key=lambda x: x.cost)
 
     # Determine the number of solutions allowed to survive from the given survival ratio
-    # and how many room that leaves for children.
+    # and how much room that leaves for children.
     survivors = int(len(population) * survivalRatio)
     nr_of_children = len(population) - survivors
 
@@ -104,9 +104,11 @@ def generation(population):
     # If the elite variable is set to false, we want to keep some solutions that don't look promising 
     # yet alive anyway, to keep the genetic varation in the population high. We do this by replacing some of the 
     # solutions that endid up in the surviving part of the array (beginning of the array), with some of the solutions 
-    # that ended up in the 'dying' part of the array (the rest of the array, border is determines by survivalRatio).
+    # that ended up in the 'dying' part of the array (the rest of the array, border is determined by survivalRatio).
+    # The number of elite survivors is the total nr twice multiplied by the survival ratio. If that drops below 1, at least
+    # the very best solution is kept alive.
     if elite is False:
-        elites = int(len(population) * (survivalRatio*survivalRatio))
+        elites = max(1,int(len(population) * (survivalRatio*survivalRatio)))
         rest = population[elites+1:]
         random.shuffle(rest)
         population[elites+1:] = rest
