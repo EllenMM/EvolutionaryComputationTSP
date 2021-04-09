@@ -8,5 +8,5 @@ Alternatively edit the distance matrix in the GeneticTSP file.
 There are several variables you can play with to optimize the algorithm:
   - Population size
   - Number of generations it runs
-  - How many not-so-good-looking-so-far solutions you keep alive to keep genetic diversity on your population
+  - How many not-so-good-looking-so-far solutions you keep alive to keep genetic diversity in your population
   - The ratio of types of reproduction used each generation: mutation or cross-over
